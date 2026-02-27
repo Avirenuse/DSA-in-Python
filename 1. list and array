@@ -40,3 +40,15 @@ for i in my_array:
     minVal = i
 
 print('Lowest value:', minVal)
+
+"""Time Complexity
+Run Time
+When exploring algorithms, we often look at how much time an algorithm takes to run relative to the size of the data set.
+
+In the example above, the time the algorithm needs to run is proportional, or linear, to the size of the data set. This is because the algorithm must visit every array element one time to find the lowest value. The loop must run 5 times since there are 5 values in the array. And if the array had 1000 values, the loop would have to run 1000 times.
+
+Try the simulation below to see this relationship between the number of compare operations needed to find the lowest value, and the size of the array.
+
+See this page for a more thorough explanation of what time complexity is.
+
+Each algorithm in this tutorial will be presented together with its time complexity."""
