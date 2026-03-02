@@ -1,3 +1,5 @@
+my_list = [None, None, None, None, None, None, None, None, None, None]
+
 def hash_function(value):
   sum_of_chars = 0
   for char in value:
@@ -5,4 +7,11 @@ def hash_function(value):
 
   return sum_of_chars % 10
 
-print("'Bob' has hash code:", hash_function('Bob'))
+def add(name):
+  index = hash_function(name)
+  my_list[index] = name
+
+add('Bob')
+print(my_list)
+add('Alice')
+print(my_list)

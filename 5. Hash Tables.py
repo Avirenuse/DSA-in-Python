@@ -30,3 +30,31 @@ def hash_function(value):
   return sum_of_chars % 10
 
 print("'Bob' has hash code:", hash_function('Bob'))
+print("'Alice' has hash code:", hash_function('Alice'))
+
+#The character B has Unicode number 66, o has 111, and b has 98. Adding those together we get 275. Modulo 10 of 275 is 5, so "Bob" should be stored at index 5.
+
+
+# Steps of hash function 
+#Step 1: Create an Empty List
+#Step 2: Create a Hash Function
+#Step 3: Inserting an Element 
+#Step 4: Looking up a name
+#Step 5: Handling collisions
+my_list = [None, None, None, None, None, None, None, None, None, None]
+
+def hash_function(value):
+  sum_of_chars = 0
+  for char in value:
+    sum_of_chars += ord(char)
+
+  return sum_of_chars % 10
+
+def add(name):
+  index = hash_function(name)
+  my_list[index] = name
+
+add('Bob')
+print(my_list)
+add('Alice')
+print(my_list)
