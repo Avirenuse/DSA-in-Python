@@ -58,3 +58,32 @@ add('Bob')
 print(my_list)
 add('Alice')
 print(my_list)
+
+#Looking up a name
+# Now that we have a super basic Hash Table, let's see how we can look up a name from it.
+
+# To find "Pete" in the Hash Table, we give the name "Pete" to our hash function. The hash function returns 8, meaning that "Pete" is stored at index 8. So we can just check if the name at index 8 is "Pete" and if it is, we know that "Pete" is in the Hash Table.
+
+my_list = [None, None, None, None, None, None, None, None, None, None]
+
+def hash_function(value):
+  sum_of_chars = 0
+  for char in value:
+    sum_of_chars += ord(char)
+
+  return sum_of_chars % 10
+
+def add(name):
+  index = hash_function(name)
+  my_list[index] = name
+
+def contains(name):
+  index = hash_function(name)
+  return my_list[index] == name
+
+add('Bob')
+add('Pete')
+add('Jones')
+add('Lisa')
+add('Siri')
+print("'Pete' is in the Hash Table:", contains('Pete'))
