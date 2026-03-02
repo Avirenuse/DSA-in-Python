@@ -191,3 +191,19 @@ node1 = insertNodeAtPosition(node1, newNode, 2)
 
 print("\nAfter insertion:")
 traverseAndPrint(node1)
+
+
+'''Time Complexity of Linked Lists Operations
+Here we discuss time complexity of linked list operations, and compare these with the time complexity of the array algorithms that we have discussed previously in this tutorial.
+
+Remember that time complexity just says something about the approximate number of operations needed by the algorithm based on a large set of data (n), and does not tell us the exact time a specific implementation of an algorithm takes.
+
+This means that even though linear search is said to have the same time complexity for arrays as for linked list: O(n), it does not mean they take the same amount of time. The exact time it takes for an algorithm to run depends on programming language, computer hardware, differences in time needed for operations on arrays vs linked lists, and many other things as well.
+
+Linear search for linked lists works the same as for arrays. A list of unsorted values are traversed from the head node until the node with the specific value is found. Time complexity is O(n).
+
+Binary search is not possible for linked lists because the algorithm is based on jumping directly to different array elements, and that is not possible with linked lists.
+
+Sorting algorithms have the same time complexities as for arrays, and these are explained earlier in this tutorial. But remember, sorting algorithms that are based on directly accessing an array element based on an index, do not work on linked lists.
+
+Insertion and deletion of nodes in linked lists have a time complexity of O(1) if the position of the node to be inserted or deleted is known. This is because we can directly access the node and update the pointers without needing to shift any elements, as we would in an array. However, if we need to search for the position first, then the time complexity becomes O(n) due to the need to traverse the list.'''
