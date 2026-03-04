@@ -63,3 +63,21 @@ if result:
   print(f"\nFound the node with value: {result.data}")
 else:
   print("Value not found in the BST.")
+
+
+# Inserting a node in a BST:
+
+def insert(node, data):
+  if node is None:
+    return TreeNode(data)
+  else:
+    if data < node.data:
+      node.left = insert(node.left, data)
+    elif data > node.data:
+      node.right = insert(node.right, data)
+  return node
+
+# Inserting new value into the BST
+insert(root, 10)
+print("\nIn-order traversal after inserting 10:")
+inOrderTraversal(root)
