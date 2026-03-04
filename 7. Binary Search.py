@@ -1,3 +1,6 @@
+'''A Binary Search Tree is a Binary Tree where every node's left child has a lower value, and every node's right child has a higher value.
+
+A clear advantage with Binary Search Trees is that operations like search, delete, and insert are fast and done without having to shift values in memory.'''
 class TreeNode:
   def __init__(self, data):
     self.data = data
@@ -57,6 +60,6 @@ def search(node, target):
 # Search for a value
 result = search(root, 13)
 if result:
-  print(f"Found the node with value: {result.data}")
+  print(f"\nFound the node with value: {result.data}")
 else:
   print("Value not found in the BST.")
