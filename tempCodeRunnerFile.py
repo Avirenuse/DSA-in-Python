@@ -1,24 +1,36 @@
+# Pre-order Traversal of Binary Trees
+class TreeNode:
+  def __init__(self, data):
+    self.data = data
+    self.left = None
+    self.right = None
 
-my_list = [None, None, None, None, None, None, None, None, None, None]
+def preOrderTraversal(node):
+  if node is None:
+    return
+  print(node.data, end=", ")
+  preOrderTraversal(node.left)
+  preOrderTraversal(node.right)
 
-def hash_function(value):
-  sum_of_chars = 0
-  for char in value:
-    sum_of_chars += ord(char)
+root = TreeNode('R')
+nodeA = TreeNode('A')
+nodeB = TreeNode('B')
+nodeC = TreeNode('C')
+nodeD = TreeNode('D')
+nodeE = TreeNode('E')
+nodeF = TreeNode('F')
+nodeG = TreeNode('G')
 
-  return sum_of_chars % 10
+root.left = nodeA
+root.right = nodeB
 
-def add(name):
-  index = hash_function(name)
-  my_list[index] = name
+nodeA.left = nodeC
+nodeA.right = nodeD
 
-def contains(name):
-  index = hash_function(name)
-  return my_list[index] == name
+nodeB.left = nodeE
+nodeB.right = nodeF
 
-add('Bob')
-add('Pete')
-add('Jones')
-add('Lisa')
-add('Siri')
-print("'Pete' is in the Hash Table:", contains('Pete'))
+nodeF.left = nodeG
+
+# Traverse
+preOrderTraversal(root)
