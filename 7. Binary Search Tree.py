@@ -80,4 +80,4 @@ def insert(node, data):
 # Inserting new value into the BST
 insert(root, 10)
 print("\nIn-order traversal after inserting 10:")
-inOrderTraversal(root)
+inOrderTraversal(root)  
