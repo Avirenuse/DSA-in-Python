@@ -201,3 +201,16 @@ delete(root,15)
 # Traverse
 print() # Creates a new line
 inOrderTraversal(root)
+
+'''Line 1: The node argument here makes it possible for the function to call itself recursively on smaller and smaller subtrees in the search for the node with the data we want to delete.
+
+Line 2-8: This is searching for the node with correct data that we want to delete.
+
+Line 9-22: The node we want to delete has been found. There are three such cases:
+
+Case 1: Node with no child nodes (leaf node). None is returned, and that becomes the parent node's new left or right value by recursion (line 6 or 8).
+Case 2: Node with either left or right child node. That left or right child node becomes the parent's new left or right child through recursion (line 7 or 9).
+Case 3: Node has both left and right child nodes. The in-order successor is found using the minValueNode() function. We keep the successor's value by setting it as the value of the node we want to delete, and then we can delete the successor node.
+Line 24: node is returned to maintain the recursive functionality.
+
+The time complexity of search, insert, and delete operations in a Binary Search Tree is O(h), where h is the height of the tree. In the best case (balanced tree), this is O(log n), and in the worst case (unbalanced tree), this is O(n).'''
