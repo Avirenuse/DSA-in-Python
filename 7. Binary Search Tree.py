@@ -106,3 +106,17 @@ def insert(node, data):
 insert(root, 10)
 # Traverse to see the new value
 inOrderTraversal(root)
+
+# Find the lowest value in a BST subtree
+def findMin(node):
+  if node is None:
+    return None
+  elif node.left is None:
+    return node
+  else:
+    return findMin(node.left)
+
+minNode = findMin(root)
+if minNode:
+  print(f"\nThe lowest value in the BST is: {minNode.data}")
+  
