@@ -46,6 +46,11 @@ inOrderTraversal(root)
 # If the value we are looking for is lower, continue searching in the left subtree.
 # If the subtree we want to search does not exist, depending on the programming language, return None, or NULL, or something similar, to indicate that the value is not inside the BST.
 
+class TreeNode:
+  def __init__(self, data):
+    self.data = data
+    self.left = None
+    self.right = None
 
 def search(node, target):
   if node is None:
@@ -57,27 +62,30 @@ def search(node, target):
   else:
     return search(node.right, target)
 
+root = TreeNode(13)
+node7 = TreeNode(7)
+node15 = TreeNode(15)
+node3 = TreeNode(3)
+node8 = TreeNode(8)
+node14 = TreeNode(14)
+node19 = TreeNode(19)
+node18 = TreeNode(18)
+
+root.left = node7
+root.right = node15
+
+node7.left = node3
+node7.right = node8
+
+node15.left = node14
+node15.right = node19
+
+node19.left = node18
+
 # Search for a value
 result = search(root, 13)
 if result:
-  print(f"\nFound the node with value: {result.data}")
+  print(f"Found the node with value: {result.data}")
 else:
   print("Value not found in the BST.")
-
-
-# Inserting a node in a BST:
-
-def insert(node, data):
-  if node is None:
-    return TreeNode(data)
-  else:
-    if data < node.data:
-      node.left = insert(node.left, data)
-    elif data > node.data:
-      node.right = insert(node.right, data)
-  return node
-
-# Inserting new value into the BST
-insert(root, 10)
-print("\nIn-order traversal after inserting 10:")
-inOrderTraversal(root)
+  
