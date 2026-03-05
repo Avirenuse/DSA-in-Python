@@ -104,3 +104,5 @@ def insert(node, data):
 
 # Inserting new value into the BST
 insert(root, 10)
+# Traverse to see the new value
+inOrderTraversal(root)
