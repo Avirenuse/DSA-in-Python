@@ -119,4 +119,9 @@ def findMin(node):
 minNode = findMin(root)
 if minNode:
   print(f"\nThe lowest value in the BST is: {minNode.data}")
-  
+
+  '''How it works:
+
+1. If the node is a leaf node, remove it by removing the link to it.
+2. If the node only has one child node, connect the parent node of the node you want to remove to that child node.
+3. If the node has both right and left child nodes: Find the node's in-order successor, change values with that node, then delete it.'''
