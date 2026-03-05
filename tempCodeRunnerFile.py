@@ -1,15 +1,46 @@
 class TreeNode:
-  def __init__(self, data):
-    self.data = data
-    self.left = None
-    self.right = None
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
 
 def inOrderTraversal(node):
-  if node is None:
-    return
-  inOrderTraversal(node.left)
-  print(node.data, end=", ")
-  inOrderTraversal(node.right)
+    if node is None:
+        return
+    inOrderTraversal(node.left)
+    print(node.data, end=", ")
+    inOrderTraversal(node.right)
+
+def minValueNode(node):
+    current = node
+    while current.left is not None:
+        current = current.left
+    return current
+
+def delete(node, data):
+    if not node:
+        return None
+
+    if data < node.data:
+        node.left = delete(node.left, data)
+    elif data > node.data:
+        node.right = delete(node.right, data)
+    else:
+        # Node with only one child or no child
+        if not node.left:
+            temp = node.right
+            node = None
+            return temp
+        elif not node.right:
+            temp = node.left
+            node = None
+            return temp
+
+        # Node with two children, get the in-order successor
+        node.data = minValueNode(node.right).data
+        node.right = delete(node.right, node.data)
+
+    return node
 
 root = TreeNode(13)
 node7 = TreeNode(7)
@@ -34,29 +65,9 @@ node19.left = node18
 # Traverse
 inOrderTraversal(root)
 
+# Delete node 15
+delete(root,15)
 
-# How it works:
-
-# Start at the root node.
-# If this is the value we are looking for, return.
-# If the value we are looking for is higher, continue searching in the right subtree.
-# If the value we are looking for is lower, continue searching in the left subtree.
-# If the subtree we want to search does not exist, depending on the programming language, return None, or NULL, or something similar, to indicate that the value is not inside the BST.
-
-
-def search(node, target):
-  if node is None:
-    return None
-  elif node.data == target:
-    return node
-  elif target < node.data:
-    return search(node.left, target)
-  else:
-    return search(node.right, target)
-
-# Search for a value
-result = search(root, 13)
-if result:
-  print(f"Found the node with value: {result.data}")
-else:
-  print("Value not found in the BST.")
+# Traverse
+print() # Creates a new line
+inOrderTraversal(root)
