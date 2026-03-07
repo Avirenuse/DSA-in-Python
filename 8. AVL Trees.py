@@ -495,60 +495,17 @@ Take a look at the unbalanced Binary Search Tree below. Searching for "M" means 
 
 So in worst case, algorithms like search, insert, and delete must run through the whole height of the tree. This means that keeping the height (h) of the tree low, like we do using AVL Trees, gives us a lower runtime.
 
-B
-G
-E
-K
-F
-P
-I
-M
-Binary Search Tree
-(unbalanced)
-G
-E
-K
-B
-F
-I
-P
-M
+
+
 AVL Tree
 (self-balancing)
-See the comparison of the time complexities between Binary Search Trees and AVL Trees below, and how the time complexities relate to the height (
-h
-) of the tree, and the number of nodes (
-n
-) in the tree.
+See the comparison of the time complexities between Binary Search Trees and AVL Trees below, and how the time complexities relate to the height (h) of the tree, and the number of nodes (n) in the tree.
 
 The BST is not self-balancing. This means that a BST can be very unbalanced, almost like a long chain, where the height is nearly the same as the number of nodes. This makes operations like searching, deleting and inserting nodes slow, with time complexity 
-O
-(
-h
-)
-=
-O
-(
-n
-)
-.
+O(h)=O(n).
 The AVL Tree however is self-balancing. That means that the height of the tree is kept to a minimum so that operations like searching, deleting and inserting nodes are much faster, with time complexity 
-O
-(
-h
-)
-=
-O
-(
-log
-n
-)
-.
-O
-(
-log
-n
-)
+O(h)=O(logn).O(logn)
+
  Explained
 The fact that the time complexity is 
 O
