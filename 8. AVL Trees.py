@@ -508,16 +508,8 @@ O(h)=O(logn).O(logn)
 
  Explained
 The fact that the time complexity is 
-O
-(
-h
-)
-=
-O
-(
-log
-n
-)
+O(h) = O(logn)
+
  for search, insert, and delete on an AVL Tree with height 
 h
  and nodes 
@@ -526,60 +518,6 @@ n
 
 Imagine a perfect Binary Tree where all nodes have two child nodes except on the lowest level, like the AVL Tree below.
 
-H
-D
-B
-F
-E
-G
-A
-C
-L
-J
-N
-M
-O
-I
-K
-The number of nodes on each level in such an AVL Tree are:
-
-1
-,
-2
-,
-4
-,
-8
-,
-16
-,
-32
-,
-.
-.
-
-Which is the same as:
-
-2
-0
-,
-2
-1
-,
-2
-2
-,
-2
-3
-,
-2
-4
-,
-2
-5
-,
-.
-.
 
 To get the number of nodes 
 n
