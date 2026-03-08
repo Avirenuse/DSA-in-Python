@@ -523,8 +523,7 @@ To get the number of nodes
 n
  in a perfect Binary Tree with height 
 h
-=
-3
+=3
 , we can add the number of nodes on each level together:
 n3 = 20+21+22+23 = 15
 
