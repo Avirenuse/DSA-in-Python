@@ -529,15 +529,8 @@ n3 = 20+21+22+23 = 15
 
 Which is actually the same as:
 
-n
-3
-=
-2
-4
-−
-1
-=
-15
+n3 = 24 −
+1 = 15
 
 And this is actually the case for larger trees as well! If we want to get the number of nodes 
 n
