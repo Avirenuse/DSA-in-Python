@@ -526,23 +526,7 @@ h
 =
 3
 , we can add the number of nodes on each level together:
-
-n
-3
-=
-2
-0
-+
-2
-1
-+
-2
-2
-+
-2
-3
-=
-15
+n3 = 20+21+22+23 = 15
 
 Which is actually the same as:
 
