@@ -50,3 +50,4 @@ But if Linear Search runs through the whole array of n values, without finding t
 
 This means that time complexity for Linear Search is: 
 O(n)''' 
+
