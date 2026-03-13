@@ -41,6 +41,8 @@ for i in my_array:
 
 print('Lowest value:', minVal)
 
+
+
 """Time Complexity
 Run Time
 When exploring algorithms, we often look at how much time an algorithm takes to run relative to the size of the data set.
